@@ -1,0 +1,33 @@
+{
+  "apps" : [{
+    "name"      : "API",
+    "script"    : "app.js",
+    "env": {
+      "COMMON_VARIABLE": "true"
+    },
+    "env_production" : {
+      "NODE_ENV": "production"
+    }
+  },{
+    "name"      : "WEB",
+    "script"    : "web.js"
+  }],
+  "deploy" : {
+    "production" : {
+      "user" : "root",
+      "host" : "178.62.11.224",
+      "ref"  : "origin/master",
+      "repo" : "git@github.com:Globegitter/pm2-deploy-test.git",
+      "path" : "/var/www/production",
+      "post-deploy" : "pm2 startOrRestart ecosystem.json -x --env production"
+    },
+    "dev" : {
+      "user" : "root",
+      "host" : "178.62.11.224",
+      "ref"  : "origin/master",
+      "repo" : "git@github.com:Globegitter/pm2-deploy-test.gitt",
+      "path" : "/var/www/development",
+      "post-deploy" : "pm2 startOrRestart ecosystem.json -x --env dev"
+    }
+  }
+}

@@ -17,8 +17,10 @@ module.exports = {
    * environment (see config/connections.js and config/models.js )           *
    ***************************************************************************/
 
-  // models: {
+  models: {
+    //change to migrate: auto if you are using mysql or pgsql
+    migrate: 'safe'
   //   connection: 'someMongodbServer'
-  // }
+  }
 
 };

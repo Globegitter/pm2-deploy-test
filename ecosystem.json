@@ -14,19 +14,19 @@
   }],
   "deploy" : {
     "production" : {
-      "user" : "root",
+      "user" : "artificial",
       "host" : "178.62.11.224",
       "ref"  : "origin/master",
       "repo" : "git@github.com:Globegitter/pm2-deploy-test.git",
-      "path" : "/root/apps/pm2-deploy/production",
+      "path" : "~/apps/pm2-deploy/production",
       "post-deploy" : "pm2 startOrRestart ecosystem.json -x --env production"
     },
     "dev" : {
-      "user" : "root",
+      "user" : "artificial",
       "host" : "178.62.11.224",
       "ref"  : "origin/master",
       "repo" : "git@github.com:Globegitter/pm2-deploy-test.git",
-      "path" : "/root/apps/pm2-deploy/development",
+      "path" : "~/apps/pm2-deploy/development",
       "post-deploy" : "pm2 startOrRestart ecosystem.json -x --env dev"
     }
   }

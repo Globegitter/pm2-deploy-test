@@ -19,7 +19,7 @@
       "ref"  : "origin/master",
       "repo" : "git@github.com:Globegitter/pm2-deploy-test.git",
       "path" : "~/apps/pm2-deploy/production",
-      "post-deploy" : "npm install; and pm2 startOrRestart ecosystem.json -x --env production"
+      "post-deploy" : "npm install && pm2 startOrRestart ecosystem.json -x --env production"
     },
     "dev" : {
       "user" : "artificial",
@@ -27,7 +27,7 @@
       "ref"  : "origin/master",
       "repo" : "git@github.com:Globegitter/pm2-deploy-test.git",
       "path" : "~/apps/pm2-deploy/development",
-      "post-deploy" : "npm install; and pm2 startOrRestart ecosystem.json -x --env dev"
+      "post-deploy" : "npm install && pm2 startOrRestart ecosystem.json -x --env dev"
     }
   }
 }
